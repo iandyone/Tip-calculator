@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="calculator">
+            <div class="calculator__container container" id="container">
+                <h1>Tip Calculator</h1>
+                <div id="calculator" class="calculator__form">
+                    <form>
+                        <label>Какова сумма счета?<br>
+                            <input type="number" id="billAmount" placeholder="Сумма счета, BYN">
+                        </label>
+                        <label>Оцените качество сервиса<br>
+                            <select id="serviceQuality">
+                                <option disabled selected value="0">-- Оцените качество сервиса --</option>
+                                <option value="0.3">30% - Невероятно</option>
+                                <option value="0.2">20% - Отлично</option>
+                                <option value="0.15">15% - Хорошо</option>
+                                <option value="0.1">10% - Неплохо</option>
+                                <option value="0.05">5% - Ужасно</option>
+                            </select>
+                        </label>
+                        <label> Сколько человек разделяет счет?<br>
+                            <input type="number" id="totalPeople" placeholder="1">
+                        </label>
+                        <button type="button" id="calculate" onclick="calculateTip()">Calculate!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tips" id="tips">
+            <div class="tips__container">
+                <div class="tips__result">
+                    <h5 class="tips__label">Чаевых всего</h5>
+                    <span id="tip-total">0.00 BYN</span>
+                </div>
+                <div class="tips__result">
+                    <h5 class="tips__label">Чаевых на человека</h5>
+                    <span id="tip-each">0.00 BYN</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
